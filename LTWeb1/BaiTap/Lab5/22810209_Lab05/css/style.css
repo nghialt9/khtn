@@ -1,0 +1,22 @@
+.row, .col {
+    padding: 5px;
+    display: flex;
+}
+
+.table-responsive {
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+input:required:invalid, input:focus:invalid {
+    background-image: url(../images/invalid.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+input:required:valid {
+    background-image: url(../images/valid.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+}

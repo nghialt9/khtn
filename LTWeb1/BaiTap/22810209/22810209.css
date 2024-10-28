@@ -1,0 +1,140 @@
+.container-fluid {
+    background-image: url('images/le-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    font-size: 16px;
+}
+
+.container {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    padding-top: 60px;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+}
+
+h1 {
+    font-size: 2.6rem !important;
+    font-weight: 900 !important;
+}
+
+h5 {
+    font-weight: 900 !important;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.col {
+    line-height: 3;
+}
+
+.bton {
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+    padding: 0.5rem 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    line-height: 2;
+}
+
+.bton-black {
+    border: 2px solid #252525;
+    background: #252525;
+}
+
+.bton-pink {
+    border: 2px solid #e38773;
+    background:  #e38773;
+}
+
+.card {
+    border: none !important;
+    text-align: center;
+}
+
+.card .card-body:last-child {
+    margin-top: -2rem;
+}
+
+.card-btn {
+    border: 1.5px solid #e38773;
+    border-radius: 5px;
+    text-decoration: none !important;
+    color: #e38773 !important;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+#footer {
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    width: 100vw;
+    top: 5rem;
+    right: 4rem;
+}
+
+label {
+    margin-left: inherit;
+}
+
+form {
+    border: 1.5px solid #e38773;
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+    background: white;
+}
+
+input, textarea {
+    margin-bottom: 10px !important;
+    height: 2.5rem;
+    border: 1px solid #e38773 !important;
+}
+
+textarea {
+    height: 8rem;
+}
+
+input[type="submit"] {
+    width: 9rem;
+    max-width: 100%;
+    font-size: 1rem;
+    float: right;
+    line-height: 0;
+}
+
+.col-3 {
+    padding-right: 0 !important;
+}
+
+.modal {
+    --bs-modal-width: 700px !important;
+}
+
+.modal-body div:first-child {
+    text-align: center !important;
+}
+
+.modal-body div:last-child {
+    text-align: justify !important;
+}
+
+.modal-body img {
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập HTML nâng cao</title>
+</head>
+<style>
+    .star {
+        font-size: x-large;
+        color: gray;
+    }
+
+    .star:before {
+        content:'\2605';
+    }
+
+    .star.on {
+        color: #F4AA5A;
+    }
+
+    .star.half:after {
+        content:'\2605';
+        color: #F4AA5A;
+        position: absolute;
+        margin-left: -20px;
+        width: 10px;
+        overflow: hidden;
+    }
+</style>
+<body>
+    <div align="center"><h1 style="color: #F20705;">Điện thoại di động của tôi</h1></div>
+    <hr style="border-top: 1px solid #AEAEAE; height: 1;">
+    <div align="center">
+        <p style="font-weight: bold;">
+            <span style="color: #778DE4;">SAMSUNG X520 - YELLOW</span><br>
+            <img src="images/Samsung1.jpg"><br>
+            Giá: <span style="color: red;">1.759.000 VND</span><br>
+            <span class="star on"></span>
+            <span class="star on"></span>
+            <span class="star on"></span>
+            <span class="star on"></span>
+            <span class="star half"></span>
+        </p>
+        <hr style="border-top: 1px solid #AEAEAE; height: 1;">
+        <p style="font-weight: bold;">
+            <span style="color: #778DE4;">SAMSUNG X520 - RED</span><br>
+            <img src="images/Samsung2.jpg"><br>
+            Giá: <span style="color: red;">1.759.000 VND</span><br>
+            <span class="star on"></span>
+            <span class="star on"></span>
+            <span class="star on"></span>
+            <span class="star on"></span>
+            <span class="star half"></span>
+        </p>
+        <hr style="border-top: 1px solid #AEAEAE; height: 1;">
+        <p style="font-weight: bold;">
+            <span style="color: #778DE4;">SAMSUNG X520 - BLUE</span><br>
+            <img src="images/Samsung3.jpg"><br>
+            Giá: <span style="color: red;">1.759.000 VND</span><br>
+            <span class="star on"></span>
+            <span class="star on"></span>
+            <span class="star half"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+        </p>
+        <hr style="border-top: 1px solid #AEAEAE; height: 1;"><br>
+    </div>
+</body>
+</html>

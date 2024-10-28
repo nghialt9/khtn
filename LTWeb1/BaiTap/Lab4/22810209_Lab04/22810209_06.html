@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        function headFunc() {
+            document.getElementById("demo").innerHTML = "Paragraph changed from head.";
+        }
+    </script>
+</head>
+<body>
+    <h1>Javascript in Body</h1>
+    <p id="demo">A Paragraph.</p>
+    <button type="button" onclick="bodyFunc()">Body</button>
+    <button type="button" onclick="headFunc()">Head</button>
+    <button type="button" onclick="externalFunc()">External file</button>
+    <script>
+        function bodyFunc() {
+            document.getElementById("demo").innerHTML = "Paragraph changed from body.";
+        }
+    </script>
+    <script src="js/myScript.js"></script>
+</body>
+</html>

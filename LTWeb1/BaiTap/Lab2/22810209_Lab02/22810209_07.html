@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="01_Result.html" name="frmOrder" method="get">
+        <fieldset>
+            <legend>Information</legend>
+            Name: <input type="text" name="txtName" id="txtName"><br>
+            Food like:
+            <select name="selFood" id="selFood">
+                <option value="pho">Pho - Vietnamese noodle</option>
+                <option value="chq">Chicken soup</option>
+                <option value="dck" selected>Duck subegg</option>
+                <option value="">Baby brid dry</option>
+            </select>
+            <br>
+            Images: <input type="file" name="filImages" id="filImages">
+            <br>
+            <input type="submit" value="Order">
+            <input type="reset" name="" id="">
+            <input type="button" value="Show message" onclick="alert('Hello class')">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+		Tic Tac Toe with Minimax AI Algorithm
+		Author: Clederson Cruz
+		Year: 2017
+		License: GNU GENERAL PUBLIC LICENSE (GPL)
+		-->
+
+		<meta charset="UTF-8" />
+		<meta content="Clederson Cruz" name="author" />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link type="text/css" rel="stylesheet" href="web_version/style.css" />
+		<script type="text/javascript" src="web_version/script.js"></script>
+		<title>Jogo da Velha - Minimax</title>
+	</head>
+	<body>
+		<header>
+			<p>Minimax Algorithm</p>
+		</header>
+			<br />
+			<p id="message"></p>
+			<br />
+		<table id="tab-tic-tac-toe" cellspacing="0">
+			<tr>
+				<td id="00" onclick="clickedCell(this)"></td><td id="01" onclick="clickedCell(this)"></td><td id="02" onclick="clickedCell(this)"></td><td id="03" onclick="clickedCell(this)"></td><td id="04" onclick="clickedCell(this)"></td>
+				<!-- <td id="05" onclick="clickedCell(this)"></td><td id="06" onclick="clickedCell(this)"></td><td id="07" onclick="clickedCell(this)"></td><td id="08" onclick="clickedCell(this)"></td><td id="09" onclick="clickedCell(this)"></td> -->
+			</tr>
+			<tr>
+				<td id="10" onclick="clickedCell(this)"></td><td id="11" onclick="clickedCell(this)"></td><td id="12" onclick="clickedCell(this)"></td><td id="13" onclick="clickedCell(this)"></td><td id="14" onclick="clickedCell(this)"></td>
+				<!-- <td id="15" onclick="clickedCell(this)"></td><td id="16" onclick="clickedCell(this)"></td><td id="17" onclick="clickedCell(this)"></td><td id="18" onclick="clickedCell(this)"></td><td id="19" onclick="clickedCell(this)"></td> -->
+			</tr>
+			<tr>
+				<td id="20" onclick="clickedCell(this)"></td><td id="21" onclick="clickedCell(this)"></td><td id="22" onclick="clickedCell(this)"></td><td id="23" onclick="clickedCell(this)"></td><td id="24" onclick="clickedCell(this)"></td>
+				<!-- <td id="25" onclick="clickedCell(this)"></td><td id="26" onclick="clickedCell(this)"></td><td id="27" onclick="clickedCell(this)"></td><td id="28" onclick="clickedCell(this)"></td><td id="29" onclick="clickedCell(this)"></td> -->
+			</tr>
+			<tr>
+				<td id="30" onclick="clickedCell(this)"></td><td id="31" onclick="clickedCell(this)"></td><td id="32" onclick="clickedCell(this)"></td><td id="33" onclick="clickedCell(this)"></td><td id="34" onclick="clickedCell(this)"></td>
+				<!-- <td id="35" onclick="clickedCell(this)"></td><td id="36" onclick="clickedCell(this)"></td><td id="37" onclick="clickedCell(this)"></td><td id="38" onclick="clickedCell(this)"></td><td id="39" onclick="clickedCell(this)"></td> -->
+			</tr>
+			<tr>
+				<td id="40" onclick="clickedCell(this)"></td><td id="41" onclick="clickedCell(this)"></td><td id="42" onclick="clickedCell(this)"></td><td id="43" onclick="clickedCell(this)"></td><td id="44" onclick="clickedCell(this)"></td>
+				<!-- <td id="45" onclick="clickedCell(this)"></td><td id="46" onclick="clickedCell(this)"></td><td id="47" onclick="clickedCell(this)"></td><td id="48" onclick="clickedCell(this)"></td><td id="49" onclick="clickedCell(this)"></td> -->
+			</tr>
+		<!--
+			<tr>
+				<td id="50" onclick="clickedCell(this)"></td><td id="51" onclick="clickedCell(this)"></td><td id="52" onclick="clickedCell(this)"></td><td id="53" onclick="clickedCell(this)"></td><td id="54" onclick="clickedCell(this)"></td>
+				<td id="55" onclick="clickedCell(this)"></td><td id="56" onclick="clickedCell(this)"></td><td id="57" onclick="clickedCell(this)"></td><td id="58" onclick="clickedCell(this)"></td><td id="59" onclick="clickedCell(this)"></td>
+			</tr>
+			<tr>
+				<td id="60" onclick="clickedCell(this)"></td><td id="61" onclick="clickedCell(this)"></td><td id="62" onclick="clickedCell(this)"></td><td id="63" onclick="clickedCell(this)"></td><td id="64" onclick="clickedCell(this)"></td>
+				<td id="65" onclick="clickedCell(this)"></td><td id="66" onclick="clickedCell(this)"></td><td id="67" onclick="clickedCell(this)"></td><td id="68" onclick="clickedCell(this)"></td><td id="69" onclick="clickedCell(this)"></td>
+			</tr>
+			<tr>
+				<td id="70" onclick="clickedCell(this)"></td><td id="71" onclick="clickedCell(this)"></td><td id="72" onclick="clickedCell(this)"></td><td id="73" onclick="clickedCell(this)"></td><td id="74" onclick="clickedCell(this)"></td>
+				<td id="75" onclick="clickedCell(this)"></td><td id="76" onclick="clickedCell(this)"></td><td id="77" onclick="clickedCell(this)"></td><td id="78" onclick="clickedCell(this)"></td><td id="79" onclick="clickedCell(this)"></td>
+			</tr>
+			<tr>
+				<td id="80" onclick="clickedCell(this)"></td><td id="81" onclick="clickedCell(this)"></td><td id="82" onclick="clickedCell(this)"></td><td id="83" onclick="clickedCell(this)"></td><td id="84" onclick="clickedCell(this)"></td>
+				<td id="85" onclick="clickedCell(this)"></td><td id="86" onclick="clickedCell(this)"></td><td id="87" onclick="clickedCell(this)"></td><td id="88" onclick="clickedCell(this)"></td><td id="89" onclick="clickedCell(this)"></td>
+			</tr>
+			<tr>
+				<td id="90" onclick="clickedCell(this)"></td><td id="91" onclick="clickedCell(this)"></td><td id="92" onclick="clickedCell(this)"></td><td id="93" onclick="clickedCell(this)"></td><td id="94" onclick="clickedCell(this)"></td>
+				<td id="95" onclick="clickedCell(this)"></td><td id="96" onclick="clickedCell(this)"></td><td id="97" onclick="clickedCell(this)"></td><td id="98" onclick="clickedCell(this)"></td><td id="99" onclick="clickedCell(this)"></td>
+			</tr>
+		-->
+		</table>
+		<br><br>
+		<input type="button" value="Start AI" id="bnt-restart" onclick="restartBnt(this)"/>
+		<br />
+		<footer>
+			<p>Read more on: <a href="https://github.com/Cledersonbc/tic-tac-toe-minimax/blob/master/README.md">Github</a></p>
+		</footer>
+	</body>
+</html>
